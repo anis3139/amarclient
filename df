@@ -1,6 +1,0 @@
-                    <p
-                      class="invoice-total-title"
-                    >Payment Amount:&#2547; {{invoiceLog.payment_amount}}</p>
-                    <p class="invoice-total-title">Payment Mathod: {{invoiceLog.payment_method}}</p>
-                    <p class="invoice-total-title">Payment Mathod: {{invoiceLog.payment_date}}</p>
-                    <p class="invoice-total-title">Payment Mathod: {{invoiceLog.note}}</p>

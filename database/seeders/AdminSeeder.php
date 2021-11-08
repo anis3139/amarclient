@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin\Admin;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,9 +15,12 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $admin = array(
-           'id' => '1','name' => 'anis','email' => 'admin@gmail.com','password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'
-        );
-        DB::table('admins')->insert($admin);
+        DB::table('admins')->truncate();
+        Admin::create([
+            'name' => 'Administrator',
+            'email' => 'superadmin@gmail.com',
+            'email_verified_at' => now(),
+            'password' => bcrypt('admin123'),
+        ]);
     }
 }

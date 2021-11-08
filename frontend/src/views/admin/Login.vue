@@ -216,6 +216,7 @@ export default {
             email: this.email,
             password: this.password,
           }).then(response => {
+            console.log(response);
             if (response.data.success) {
               localStorage.removeItem('userData')
               localStorage.setItem('userAccessToken', response.data.access_token)
